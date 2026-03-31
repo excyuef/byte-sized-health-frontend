@@ -1,10 +1,14 @@
 import './App.css'
+import Hero from './views/components/Hero.tsx'
+import Nav from './views/components/NavBar.tsx'
 
 function App() {
   return (
-    <>
-      <h1 class="text-red-800"> helo bajinguk</h1> 
-    </>
+    <div
+      className="mx-2 md:mx-8 lg:mx-32 xl:mx-60 pt-168">
+      <Nav />
+      <Hero />
+    </div>
   )
 }
 
