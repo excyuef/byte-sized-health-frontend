@@ -8,7 +8,7 @@ function Mobile({ toggle }: MobileProps) {
     <button
       className="block rounded-md bg-(--primary-color-2) p-1.5 
               text-(--primary-color-1) 
-              md:hidden"
+              lg:hidden"
 
       onClick={toggle}>
 

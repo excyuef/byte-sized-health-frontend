@@ -21,11 +21,13 @@ function Nav() {
         <Logo />
 
         <div
-          className={`absolute md:static ${isOpen ? '-translate-x-full'
-            : 'translate-x-0'} left-full transition top-12 items-center 
-          md:block bg-(--primary-color-1) px-5 pt-4 pb-8 rounded-b-md md:p-0`}>
+          className={`absolute lg:static ${isOpen
+            ? '-translate-x-full'
+            : 'translate-x-0'} 
+          left-full transition top-12 md:top-14 items-center 
+          bg-(--primary-color-1) px-5 pt-4 pb-8 rounded-b-md lg:p-0`}>
           <nav
-            className="flex justify-center">
+            className="flex justify-center min-w-32 md:min-w-46">
             <Links />
           </nav>
         </div>

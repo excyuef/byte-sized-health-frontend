@@ -3,15 +3,15 @@ import Button from './Button.tsx'
 function Intro() {
   return (
     <div
-      className="flex gap-12">
+      className="flex flex-col md:flex-row gap-12">
       <div
-        className="w-2/3 flex flex-col justify-center">
+        className="md:w-2/3 flex flex-col justify-center order-2 md:order-1">
         <h2
-          className="text-xl font-medium">
+          className="text-base md:text-xl font-medium">
           Ayo Kenali
         </h2>
         <h1
-          className="text-6xl font-bold text-(--primary-color-2)">
+          className="text-5xl md:text-6xl font-bold text-(--primary-color-2)">
           Bornout
         </h1>
         <h3
@@ -35,9 +35,9 @@ function Intro() {
       </div>
 
       <div
-        className="w-1/3">
+        className="md:w-1/3 order-1 md:order-2">
         <img
-          className="object-cover object-left h-128 w-full rounded-4xl shadow-lg"
+          className="object-cover object-left h-64 md:h-128 w-full rounded-4xl shadow-lg"
           src="/hero.jpg"
           alt="stress people" />
       </div>

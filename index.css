@@ -9,6 +9,6 @@
 
 body {
   @apply bg-linear-to-b from-(--primary-color-1) via-white via-90% 
-  to-(--primary-color-1) pb-100 text-xs md:text-sm
+  to-(--primary-color-1) text-xs md:text-sm
   font-[Poppins];
 }

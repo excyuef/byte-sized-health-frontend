@@ -3,12 +3,13 @@ function Links() {
 
   return (
     <ul
-      className="flex flex-col md:flex-row items-center justify-center gap-6">
+      className="flex flex-col lg:flex-row items-center justify-center gap-6">
       {link.map(li => {
         return (
           <li>
             <a
-              className="text-(--primary-color-2) transition hover:text-gray-500/75"
+              className="text-(--primary-color-2) transition 
+              hover:text-gray-500/75"
               key={li}
               href="#">
               {li}
