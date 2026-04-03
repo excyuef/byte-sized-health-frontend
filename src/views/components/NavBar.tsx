@@ -13,7 +13,7 @@ function Nav() {
 
   return (
     <header
-      className="bg-(--primary-color-1) h-12 md:h-14 fixed top-0 left-0 right-0 
+      className="bg-(--primary-color-1) h-12 md:h-16 fixed top-0 left-0 right-0 
       z-10">
       <div
         className="mx-auto flex h-full items-center justify-between 

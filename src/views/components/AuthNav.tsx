@@ -8,7 +8,7 @@ function Auth() {
       </a>
 
       <div
-        className="w-0.5 bg-gray-600 inline h-8"></div>
+        className="w-px bg-gray-600 inline h-7"></div>
 
       <a
         className="rounded-md bg-(--primary-color-2) px-2 py-1.5 font-medium 

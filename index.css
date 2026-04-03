@@ -2,13 +2,18 @@
 @import "tailwindcss";
 
 @theme {
-  --primary-color-1: #91b7e4;
-  --primary-color-2: #1c4281;
-  --primary-white: #e3e6ea --font-primary-poppins: "Poppins", sans-serif;
+  --primary-color-1: #dbeafe;
+  --primary-color-2: #3b82f6;
+  --primary-black: #1e293b;
+  --primary-white: #f8fafc;
 }
+/**/
+/* * { */
+/*   border: 1px solid black; */
+/* } */
 
 body {
-  @apply bg-linear-to-b from-(--primary-color-1) via-white via-90% 
-  to-(--primary-color-1) text-xs md:text-sm
+  @apply bg-linear-to-b from-(--primary-color-2) via-white via-80%
+  to-(--primary-color-1) text-xs md:text-base
   font-[Poppins];
 }

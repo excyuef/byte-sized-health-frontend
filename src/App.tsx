@@ -6,7 +6,8 @@ import Intro from './views/components/Intro.tsx'
 function App() {
   return (
     <div
-      className="mx-2 md:mx-8 lg:mx-32 xl:mx-60 pt-150 md:pt-200 pb-24 md:pb-40">
+      className="mx-2 md:mx-8 lg:mx-32 xl:mx-60 pt-150 md:pt-190 
+      pb-24 md:pb-40">
       <Nav />
       <Hero />
       <Intro />
