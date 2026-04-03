@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import Root from './src/Root.tsx'
 import LandingPage from './src/views/pages/LandingPage.tsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
@@ -11,15 +12,15 @@ AOS.init({
   duration: 600,
 });
 
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />,
+    Component: Root,
+    children: [
+      { index: true, Component: LandingPage },
+    ],
   },
-  {
-    path: "/home",
-    element: <LandingPage />,
-  }
 ]);
 
 createRoot(document.getElementById('root')!).render(
