@@ -7,7 +7,7 @@ function Explanation({ id, active, title, children, examples }: ExplainProps) {
     <div
       className={`${active ? 'static' : 'hidden'} flex flex-col gap-4`}
       data-aos="zoom-out"
-      id={id}>
+      id={`${id}`}>
       <h2
         className='text-3xl text-(--primary-black) font-medium'>
         {title}

@@ -12,6 +12,10 @@
 /*   border: 1px solid black; */
 /* } */
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
   @apply bg-linear-to-b from-(--primary-color-2) via-white via-80%
   to-(--primary-color-1) text-xs md:text-base

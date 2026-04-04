@@ -1,5 +1,5 @@
-import type { ExplainProps } from "./types/Explanation.ts";
-export const explanations: ExplainProps[] = [
+import type { ExplainDummy } from "./types/Explanation.ts";
+export const explanations: ExplainDummy[] = [
   {
     title: "Kelelahan Fisik",
     children:

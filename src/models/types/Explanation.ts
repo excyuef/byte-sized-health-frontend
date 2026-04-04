@@ -1,5 +1,5 @@
 export type ExplainProps = {
-  id?: number;
+  id: number;
   active: boolean;
   title: string;
   children: React.ReactNode | string;
@@ -8,6 +8,6 @@ export type ExplainProps = {
 
 export type ExplainDummy = {
   title: string;
-  children: React.ReactNode | string;
+  children: string;
   examples: string[];
 };

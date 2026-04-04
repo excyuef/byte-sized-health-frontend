@@ -13,7 +13,6 @@ function Symptom() {
   const [isActive, setActive] = useState<number | null>(null)
 
   const handleOnCLick = (id: number) => {
-    window.location.assign(`#${id}`)
     setActive(id)
   }
 
@@ -68,7 +67,7 @@ function Symptom() {
                 id={i}
                 img={card.img}
                 active={isActive === i}
-                onClick={() => setActive(i)}>
+                onClick={() => handleOnCLick(i)}>
                 {card.title}
               </Card>
             )
