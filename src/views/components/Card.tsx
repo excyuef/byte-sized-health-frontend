@@ -1,19 +1,27 @@
-import type { PropsWithChildren } from "react"
+type Props = {
+  id: number
+  children: React.ReactNode,
+  img: string
+  active: boolean
+  onClick: (i: number) => void
+}
 
-function Card({ children }: PropsWithChildren) {
+function Card({ children, img, onClick }: Props) {
+
   return (
     <div
       className="bg-linear-to-b from-(#6E9EED) to-(--primary-white) from-60%
-      shadow-xl md:h-64 md:w-52 h-40 w-38  rounded-3xl flex flex-col 
+      shadow-xl md:h-60 md:w-56 h-40 w-38  rounded-3xl flex flex-col 
       items-center gap-6 justify-center"
-      data-aos="zoom-out">
+      data-aos="zoom-out"
+      onClick={onClick}>
       <img
-        src="src/assets/elemen/1.png"
+        src={img}
         alt="gejala"
         className="md:h-38 h-24 object-cover" />
 
       <span
-        className="text-(--primary-black) lg:text-xl font-medium">
+        className="text-(--primary-black) lg:text-lg font-medium">
         {children}
       </span>
     </div>

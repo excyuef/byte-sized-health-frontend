@@ -1,9 +1,33 @@
 import Card from './Card.tsx'
+import Explanation from './Explanation.tsx'
+import { explanations } from '../../models/explanations.ts'
+import { useState } from 'react'
+
+type Cards =
+  {
+    title: string,
+    img: string
+  }
 
 function Symptom() {
+  const [isActive, setActive] = useState<number | null>(null)
+
+  const handleOnCLick = (id: number) => {
+    window.location.assign(`#${id}`)
+    setActive(id)
+  }
+
+  const cards: Cards[] = [
+    { title: "Kelelahan Fisik", img: "src/assets/elemen/1.png" },
+    { title: "Moodswing", img: "src/assets/elemen/7.png" },
+    { title: "Depersonalisasi", img: "src/assets/elemen/12.png" },
+    { title: "Penurunan Performa", img: "src/assets/elemen/8.png" },
+    { title: "Gangguan Motivasi", img: "src/assets/elemen/10.png" },
+  ]
+
   return (
     <div
-      className='flex flex-col gap-8 w-full'>
+      className='flex flex-col gap-18 w-full'>
       <div
         className='lex flex-col gap-4'
         data-aos="fade-up">
@@ -18,18 +42,52 @@ function Symptom() {
       </div>
       <div
         className='w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5
-        justify-items-center gap-y-8'>
+        justify-items-center gap-y-6'>
 
-        <Card>Kelelahan Fisik</Card>
-        <Card>Kelelahan Fisik</Card>
-        <Card>Kelelahan Fisik</Card>
+        {cards.slice(0, 3).map((card, i) => {
+          return <Card
+            key={i}
+            id={i}
+            img={card.img}
+            active={isActive === i}
+            onClick={() => handleOnCLick(i)}>
+            {card.title}
+          </Card>
+
+        })}
+
         <div
-          className='md:col-span-3 flex md:flex-row flex-col gap-12 md:gap-12 
-          xl:col-start-4'>
-          <Card>Kelelahan Fisik</Card>
-          <Card>Kelelahan Fisik</Card>
+          className='md:col-span-3 flex md:flex-row flex-col gap-8 
+          md:gap-3 lg:gap-8 xl:gap-4 xl:col-start-4'>
+
+          {cards.slice(3).map((card, i) => {
+            i = i + 3
+            return (
+              <Card
+                key={i}
+                id={i}
+                img={card.img}
+                active={isActive === i}
+                onClick={() => setActive(i)}>
+                {card.title}
+              </Card>
+            )
+          })}
         </div>
       </div>
+
+      {explanations.map((explain, i) => {
+        return (
+          <Explanation
+            key={i}
+            id={i}
+            active={isActive === i}
+            title={explain.title}
+            examples={explain.examples}>
+            {explain.children}
+          </Explanation>
+        )
+      })}
     </div>
   )
 }
