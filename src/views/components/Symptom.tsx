@@ -25,7 +25,6 @@ function Symptom() {
     { title: "Gangguan Motivasi", img: "src/assets/elemen/10.png" },
   ]
 
-  console.log(isActive)
 
   return (
     <div
