@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 type Links = {
   title: string
   url: string
@@ -19,24 +21,22 @@ function Links() {
       className="flex flex-col lg:flex-row items-center justify-center gap-6">
       {link.map((li, i) => {
         return (
-          <li>
-            <a
-              className="text-(--primary-color-2) transition 
-              hover:text-gray-500/75"
-              key={i}
-              href={li.url}>
-              {li.title}
-            </a>
-          </li>)
+          <NavLink
+            key={i}
+            to={li.url}
+            className="text-(--primary-color-2) transition hover:text-gray-500/75" end>
+            {li.title}
+          </NavLink>
+        )
       })}
 
       <li>
-        <a
+        <NavLink
           className="rounded-md bg-(--primary-color-2) px-2 py-1.5 font-medium 
                   text-(--primary-color-1)"
-          href="#">
+          to="ruang bersama" end>
           Ruang Bersama
-        </a>
+        </NavLink>
       </li>
     </ul>
   )

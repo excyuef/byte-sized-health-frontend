@@ -1,6 +1,6 @@
 import Card from './Card.tsx'
 import Explanation from './Explanation.tsx'
-import { explanations } from '../../models/explanations.ts'
+import { explanations } from '@/models/explanations.ts'
 import { useState } from 'react'
 import clsx from 'clsx'
 
