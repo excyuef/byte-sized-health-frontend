@@ -2,6 +2,7 @@ import Card from './Card.tsx'
 import Explanation from './Explanation.tsx'
 import { explanations } from '../../models/explanations.ts'
 import { useState } from 'react'
+import clsx from 'clsx'
 
 type Cards =
   {
@@ -24,9 +25,11 @@ function Symptom() {
     { title: "Gangguan Motivasi", img: "src/assets/elemen/10.png" },
   ]
 
+  console.log(isActive)
+
   return (
     <div
-      className='flex flex-col gap-18 w-full'>
+      className='flex flex-col gap-18 w-full h-full mt-150 md:mt-180'>
       <div
         className='lex flex-col gap-4'
         data-aos="fade-up">
@@ -75,18 +78,22 @@ function Symptom() {
         </div>
       </div>
 
-      {explanations.map((explain, i) => {
-        return (
-          <Explanation
-            key={i}
-            id={i}
-            active={isActive === i}
-            title={explain.title}
-            examples={explain.examples}>
-            {explain.children}
-          </Explanation>
-        )
-      })}
+      <div
+        className={clsx(isActive === null ? 'h-0' : 'h-64', 'relative')}>
+        {explanations.map((explain, i) => {
+          return (
+            <Explanation
+              key={i}
+              id={i}
+              active={isActive === i}
+              title={explain.title}
+              examples={explain.examples}>
+              {explain.children}
+            </Explanation>
+          )
+        })}
+
+      </div>
     </div>
   )
 }

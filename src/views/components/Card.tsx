@@ -1,3 +1,5 @@
+import clsx from 'clsx'
+
 type Props = {
   id: number
   children: React.ReactNode,
@@ -6,16 +8,14 @@ type Props = {
   onClick: (i: number) => void
 }
 
-function Card({ id, children, img, onClick }: Props) {
+function Card({ id, children, img, active, onClick }: Props) {
 
   return (
     <a
       href={`#${id}`}
       onClick={() => onClick(id)}>
       <div
-        className="bg-linear-to-b from-(#6E9EED) to-(--primary-white) from-60%
-      shadow-xl md:h-60 md:w-56 h-40 w-38  rounded-3xl flex flex-col 
-      items-center gap-6 justify-center"
+        className={clsx(active ? "border-(--primary-color-2) border-4" : "border-0", "bg-linear-to-b from-(#6E9EED) to-(--primary-white) from-60% shadow-xl md:h-60 md:w-56 h-40 w-38 rounded-3xl flex flex-col items-center gap-6 justify-center")}
         data-aos="zoom-out"
       >
         <img

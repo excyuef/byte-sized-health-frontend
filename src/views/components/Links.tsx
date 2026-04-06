@@ -1,18 +1,31 @@
+type Links = {
+  title: string
+  url: string
+}
+
 function Links() {
-  const link: string[] = ['Beranda', 'Artikel & Tips']
+  const link: Links[] = [
+    {
+      title: 'Beranda',
+      url: '/'
+    },
+    {
+      title: 'Artikel & Tips',
+      url: 'articles'
+    }]
 
   return (
     <ul
       className="flex flex-col lg:flex-row items-center justify-center gap-6">
-      {link.map(li => {
+      {link.map((li, i) => {
         return (
           <li>
             <a
               className="text-(--primary-color-2) transition 
               hover:text-gray-500/75"
-              key={li}
-              href="#">
-              {li}
+              key={i}
+              href={li.url}>
+              {li.title}
             </a>
           </li>)
       })}
