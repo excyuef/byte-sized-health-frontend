@@ -1,3 +1,6 @@
+
+import hero from '@/assets/background/hero.jpeg'
+
 function Hero() {
   return (
     <div
@@ -7,7 +10,7 @@ function Hero() {
       <img
         className="absolute -z-10 h-full w-full object-top object-cover 
         inset-0 blur-lg md:scale-x-105"
-        src="src/assets/background/hero.jpeg"
+        src={hero}
         alt="hero" />
 
       <div

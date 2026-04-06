@@ -4,6 +4,13 @@ import { explanations } from '../../models/explanations.ts'
 import { useState } from 'react'
 import clsx from 'clsx'
 
+import img1 from '@/assets/elemen/1.png'
+import img2 from '@/assets/elemen/7.png'
+import img3 from '@/assets/elemen/12.png'
+import img4 from '@/assets/elemen/8.png'
+import img5 from '@/assets/elemen/10.png'
+
+
 type Cards =
   {
     title: string,
@@ -18,11 +25,11 @@ function Symptom() {
   }
 
   const cards: Cards[] = [
-    { title: "Kelelahan Fisik", img: "src/assets/elemen/1.png" },
-    { title: "Moodswing", img: "src/assets/elemen/7.png" },
-    { title: "Depersonalisasi", img: "src/assets/elemen/12.png" },
-    { title: "Penurunan Performa", img: "src/assets/elemen/8.png" },
-    { title: "Gangguan Motivasi", img: "src/assets/elemen/10.png" },
+    { title: "Kelelahan Fisik", img: img1 },
+    { title: "Moodswing", img: img2 },
+    { title: "Depersonalisasi", img: img3 },
+    { title: "Penurunan Performa", img: img4 },
+    { title: "Gangguan Motivasi", img: img5 },
   ]
 
 
