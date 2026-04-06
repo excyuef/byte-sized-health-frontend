@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import Root from './src/Root.tsx'
-import LandingPage from './src/views/pages/LandingPage.tsx'
-import ArticleAndTips from './src/views/pages/ArticleAndTips.tsx'
+import LandingPage from '@/views/pages/LandingPage.tsx'
+import ArticleAndTips from '@/views/pages/ArticleAndTips.tsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
