@@ -44,7 +44,8 @@ function ArticleAndTips() {
         className='flex flex-col gap-8'>
         <div>
           <h2
-            className='font-medium text-xl'>
+            className='font-medium text-xl'
+            data-aos="fade-right">
             Kenapa kamu bisa Burnout?
           </h2>
         </div>
@@ -69,7 +70,8 @@ function ArticleAndTips() {
         className='flex flex-col gap-8'>
         <div>
           <h2
-            className='font-medium text-xl'>
+            className='font-medium text-xl'
+            data-aos="fade-right">
             Kenapa kamu bisa Burnout?
           </h2>
         </div>

@@ -1,7 +1,8 @@
 function Paragraph() {
   return (
     <div
-      className="px-4">
+      className="px-4"
+      data-aos="fade" data-aos-duration="1000">
       <span
         className="text-(--primary-black)">
         Bayangkan diri kamu itu seperti sebuah smartphone.

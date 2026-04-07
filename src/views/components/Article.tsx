@@ -9,7 +9,8 @@ type ArticleProps = {
 function Article({ title, source, url }: ArticleProps) {
   return (
     <div
-      className="p-4 bg-(--primary-color-2) rounded-xl flex gap-4 shadow-2xl">
+      className="p-4 bg-(--primary-color-2) rounded-xl flex gap-4 shadow-2xl"
+      data-aos="zoom-in">
       <div>
         <img
           src="src/assets/background/hero.jpeg"
