@@ -23,12 +23,16 @@ function ArticleAndTips() {
     setActive(id)
   }
 
-  const cards: Cards[] = [
-    { title: "Kelelahan Fisik", img: img1 },
-    { title: "Moodswing", img: img2 },
-    { title: "Depersonalisasi", img: img3 },
-    { title: "Penurunan Performa", img: img4 },
-    { title: "Gangguan Motivasi", img: img5 },
+  const penyebab: Cards[] = [
+    { title: "People Pleasing", img: img1 },
+    { title: "Terlalu Perfeksionis", img: img2 },
+    { title: "Lingkungan Kerja Toxic", img: img3 },
+  ]
+
+  const mengatasi: Cards[] = [
+    { title: "Berani bilang 'Tidak'", img: img1 },
+    { title: "Social Media Detoks", img: img2 },
+    { title: "Manajemen Tugas", img: img3 },
   ]
   return (
     <>
@@ -44,16 +48,15 @@ function ArticleAndTips() {
         className='flex flex-col gap-8'>
         <div>
           <h2
-            className='font-medium text-xl'
+            className='font-medium text-2xl'
             data-aos="fade-right">
             Kenapa kamu bisa Burnout?
           </h2>
         </div>
 
         <div
-          className='w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5
-        justify-items-center gap-6'>
-          {cards.map((card, i) => {
+          className='w-full grid grid-cols-2 md:grid-cols-3 justify-items-center xl:px-32'>
+          {penyebab.map((card, i) => {
             return <Card
               key={i}
               id={i}
@@ -70,16 +73,16 @@ function ArticleAndTips() {
         className='flex flex-col gap-8'>
         <div>
           <h2
-            className='font-medium text-xl'
+            className='font-medium text-2xl'
             data-aos="fade-right">
-            Kenapa kamu bisa Burnout?
+            Cara mengatasinya
           </h2>
         </div>
 
         <div
-          className='w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5
-        justify-items-center gap-6'>
-          {cards.map((card, i) => {
+          className='w-full grid grid-cols-2 md:grid-cols-3 justify-items-center xl:px-32'>
+          {mengatasi.map((card, i) => {
+            i = i + 3
             return <Card
               key={i}
               id={i}
@@ -98,7 +101,7 @@ function ArticleAndTips() {
           Artikel
         </Title>
         <div
-          className='flex flex-col gap-4'>
+          className='flex flex-col gap-6'>
           {articles.map((article) => {
             return <Article
               title={article.title}

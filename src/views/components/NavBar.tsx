@@ -27,7 +27,7 @@ function Nav() {
           left-full transition top-12 md:top-14 items-center 
           bg-(--primary-color-1) px-5 pt-4 pb-8 rounded-b-md lg:p-0`}>
           <nav
-            className="flex justify-center min-w-32 md:min-w-46">
+            className="flex justify-center min-w-46 md:min-w-64">
             <Links />
           </nav>
         </div>
