@@ -6,8 +6,6 @@ import { useState } from 'react'
 import img1 from '@/assets/elemen/1.png'
 import img2 from '@/assets/elemen/7.png'
 import img3 from '@/assets/elemen/12.png'
-import img4 from '@/assets/elemen/8.png'
-import img5 from '@/assets/elemen/10.png'
 import { articles } from '@/models/articles.ts'
 
 type Cards =
