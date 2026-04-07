@@ -1,9 +1,12 @@
+import { NavLink } from "react-router"
+
 type ArticleProps = {
   title: string
   source: string
+  url: string
 }
 
-function Article({ title, source }: ArticleProps) {
+function Article({ title, source, url }: ArticleProps) {
   return (
     <div
       className="p-4 bg-(--primary-color-2) rounded-xl flex gap-4 shadow-2xl">
@@ -15,10 +18,11 @@ function Article({ title, source }: ArticleProps) {
       </div>
       <div
         className="flex flex-col justify-center gap-2 text-white">
-        <h2
+        <NavLink
+          to={url}
           className="text-xl font-semibold">
           {title}
-        </h2>
+        </NavLink>
         <span>
           Sumber/Source: {source}
         </span>
