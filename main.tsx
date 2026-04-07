@@ -11,8 +11,8 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init({
   once: false,
   duration: 600,
-  delay: 150,
-  startEvent: 'DOMContentLoaded'
+  startEvent: 'DOMContentLoaded',
+  easing: "ease-out-back"
 });
 
 

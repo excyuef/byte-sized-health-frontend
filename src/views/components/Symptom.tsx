@@ -35,7 +35,7 @@ function Symptom() {
 
   return (
     <div
-      className='flex flex-col gap-18 w-full h-full mt-150 md:mt-180'>
+      className='flex flex-col gap-18 w-full mt-100 md:mt-180'>
       <div
         className='lex flex-col gap-4'
         data-aos="fade-up">
@@ -85,7 +85,7 @@ function Symptom() {
       </div>
 
       <div
-        className={clsx(isActive === null ? 'h-0' : 'h-64', 'relative')}>
+        className={clsx(isActive === null ? 'h-0' : 'h-100', 'relative')}>
         {explanations.map((explain, i) => {
           return (
             <Explanation

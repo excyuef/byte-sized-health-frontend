@@ -23,7 +23,7 @@ export const explanations: ExplainDummy[] = [
     ],
   },
   {
-    title: "Depersonalisasi",
+    title: "Dipersonalisasi",
     children:
       "Depersonalisasi adalah gangguan disosiatif di mana seseorang merasa terlepas dari diri, tubuh, atau pikirannya sendiri, sering kali terasa seperti pengamat luar, robot, atau hidup dalam mimpi",
     examples: [

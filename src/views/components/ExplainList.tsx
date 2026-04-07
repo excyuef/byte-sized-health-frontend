@@ -5,7 +5,7 @@ function ExplainList({ children }: PropsWithChildren) {
     <li
       className="list-none flex items-center gap-2"
       data-aos="fade-right"
-      data-aos-offset="350"
+      data-aos-offset="50"
       data-aos-delay="100">
       <span className="text-4xl text-(--primary-color-2)">•</span>
       <span

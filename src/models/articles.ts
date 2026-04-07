@@ -1,4 +1,10 @@
-export const articles = [
+type Article = {
+  title: string;
+  source: string;
+  url: string;
+};
+
+export const articles: Article[] = [
   {
     title:
       "Cara Menghindari Burnout pada Pekerja agar Tetap Termotivasi dan Sehat",
