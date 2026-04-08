@@ -15,7 +15,7 @@ function Card({ id, children, img, active, onClick }: Props) {
       href={`#${id}`}
       onClick={() => onClick(id)}>
       <div
-        className={clsx(active ? "border-(--primary-color-2) border-4" : "border-0", "bg-linear-to-b from-(#6E9EED) to-(--primary-white) from-60% shadow-xl md:h-60 md:w-56 h-46 w-42 rounded-3xl flex flex-col items-center gap-6 justify-center")}
+        className={clsx(active ? "border-(--primary-color-2) border-4" : "border-0", "bg-linear-to-b from-(#6E9EED) to-(--primary-white) from-60% shadow-xl md:h-58 md:w-54 h-46 w-42 rounded-3xl flex flex-col items-center gap-6 justify-center")}
         data-aos="zoom-out"
       >
         <img

@@ -3,6 +3,7 @@ import './index.css'
 import Root from './src/Root.tsx'
 import LandingPage from './src/views/pages/LandingPage.tsx'
 import ArticleAndTips from './src/views/pages/ArticleAndTips.tsx'
+import Dashboard from './src/views/pages/Dashboard.tsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
@@ -22,7 +23,8 @@ const router = createBrowserRouter([
     Component: Root,
     children: [
       { index: true, Component: LandingPage },
-      { path: "articles", Component: ArticleAndTips }
+      { path: "articles", Component: ArticleAndTips },
+      { path: "dashboard", Component: Dashboard }
     ],
   },
 ]);
