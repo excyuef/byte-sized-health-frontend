@@ -1,9 +1,14 @@
-function Auth() {
+import clsx from 'clsx'
+
+function Auth({ isLogin, loginHandler }: any) {
+
   return (
-    <>
+    <div
+      className={clsx(isLogin ? "hidden" : "flex", "gap-2 items-center")}>
       <a
         className="text-(--primary-color-2) ransition hover:text-gray-500/75"
-        href="#">
+        href="#"
+        onClick={loginHandler}>
         Login
       </a>
 
@@ -13,10 +18,11 @@ function Auth() {
       <a
         className="rounded-md bg-(--primary-color-2) px-2 py-1.5 font-medium 
         text-(--primary-color-1)"
-        href="#">
+        href="#"
+        onClick={loginHandler}>
         Sign Up
       </a>
-    </>
+    </div>
   )
 }
 

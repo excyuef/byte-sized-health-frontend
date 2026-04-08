@@ -53,7 +53,7 @@ function ArticleAndTips() {
         </div>
 
         <div
-          className='w-full grid grid-cols-2 md:grid-cols-3 justify-items-center xl:px-32'>
+          className='w-full grid grid-cols-2 md:grid-cols-3 justify-items-center xl:px-32 gap-y-6'>
           {penyebab.map((card, i) => {
             return <Card
               key={i}
@@ -78,7 +78,7 @@ function ArticleAndTips() {
         </div>
 
         <div
-          className='w-full grid grid-cols-2 md:grid-cols-3 justify-items-center xl:px-32'>
+          className='w-full grid grid-cols-2 md:grid-cols-3 justify-items-center xl:px-32 gap-y-6'>
           {mengatasi.map((card, i) => {
             i = i + 3
             return <Card

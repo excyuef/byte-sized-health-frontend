@@ -3,9 +3,11 @@ import Logo from './Logo.tsx'
 import Links from './Links.tsx'
 import Auth from './AuthNav.tsx'
 import MobileMenu from './Mobile.tsx'
+import clsx from 'clsx'
 
 function Nav() {
   const [isOpen, setOpen] = useState<boolean>(false);
+  const [isLogin, setLogin] = useState<boolean>(false)
 
   const toggleHandler = () => {
     setOpen(!isOpen)
@@ -36,7 +38,13 @@ function Nav() {
           className="flex items-center">
           <div
             className="flex items-center gap-2 md:gap-4">
-            <Auth />
+            <a
+              className={clsx(isLogin ? "static" : "hidden", 'text-green-500')}>
+              Daily Check-in
+            </a>
+            <Auth
+              isLogin={isLogin}
+              loginHandler={() => { setLogin(!isLogin) }} />
             <MobileMenu toggle={toggleHandler} />
           </div>
         </div>
