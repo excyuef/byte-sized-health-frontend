@@ -3,34 +3,57 @@
 
 type ScoreProps = {
   title: string
-  score: number | string
-  status: string | number
-  isBurnout?: boolean
+  value: number | string
+  status: string
+  type: "percentage100" | "duration" | "percentage10" | "label"
 }
 
-function Score({ title, score, status, isBurnout }: ScoreProps) {
-  return (
-    <div className="flex flex-col gap-1 mt-32">
-      <span>{title}</span>
+export function Score({ title, value, type, status }: ScoreProps) {
+  const renderValue = () => {
+    if (type === "duration") {
+      return (
+        <div className="flex items-end gap-1">
+          <span className="text-3xl font-bold text-gray-700">{value}</span>
+          <span className="text-sm opacity-70">jam</span>
+        </div>
+      )
+    }
 
-      {isBurnout ? (
-        <>
-          <div className="text-xl font-bold">
-            {status}
-          </div>
-          <span>
-            Skor {score}/100
-          </span>
-        </>
-      ) : (
-        <>
-          <div className="text-xl font-bold">
-            {score}
-          </div>
-          <span>
-            {status}
-          </span>
-        </>
+    if (type === "percentage100") {
+      return (
+        <div className="flex items-end gap-1">
+          <span className="text-3xl font-bold text-gray-700">{value}</span>
+          <span className="text-sm opacity-70">/100</span>
+        </div>
+      )
+    }
+
+    if (type === "percentage10") {
+      return (
+        <div className="flex items-end gap-1">
+          <span className="text-3xl font-bold text-gray-700">{value}</span>
+          <span className="text-sm opacity-70">/10</span>
+        </div>
+      )
+    }
+
+    return <span className="text-3xl font-bold text-gray-700">{value}</span>
+  }
+
+  return (
+    <div className="bg-(--primary-color-1) p-4 rounded-xl">
+      <p className="text-sm opacity-70">
+        {title}
+      </p>
+
+      <div className="mt-2">
+        {renderValue()}
+      </div>
+
+      {status && (
+        <span className="inline-block mt-2 px-2 py-1 text-xs text-red-900 rounded bg-red-100">
+          {status}
+        </span>
       )}
     </div>
   )
