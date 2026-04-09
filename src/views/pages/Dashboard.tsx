@@ -1,9 +1,11 @@
 import Score from "@/views/components/Score"
+import Chart from "@/views/components/Chart"
+import InsightCard from '@/views/components/InsightCard'
 
 function Dashboard() {
   return (
     <div
-      className="mb-500 mt-32">
+      className="mb-500 mt-32 flex flex-col gap-4">
       <div
         className="grid grid-cols-3 gap-4">
         <Score
@@ -48,6 +50,28 @@ function Dashboard() {
           type="percentage10"
         />
 
+      </div>
+      <div
+        className="grid grid-cols-3 gap-4">
+        <Chart />
+
+        <div
+          className="flex flex-col gap-2">
+          <InsightCard
+            title="Tidur"
+            value="5 jam"
+            message="jauh dari cukup — coba tidur sebelum pukul 22.00."
+            hint="Target minimal 7 jam/malam"
+          />
+
+          <InsightCard
+            title="Beban Kerja"
+            value="Berat"
+            message="Beban kerja lagi tinggi — coba bagi tugas jadi bagian kecil biar ga kewalahan."
+            hint="Target minimal Lumayan"
+          />
+
+        </div>
       </div>
     </div>
   )
