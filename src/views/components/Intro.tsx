@@ -1,5 +1,4 @@
 import Button from './Button.tsx'
-import hero from '@/assets/background/hero.jpeg'
 import Burnout from '@/assets/elemen/burnout.jpg'
 
 function Intro() {
