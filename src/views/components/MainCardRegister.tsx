@@ -1,7 +1,5 @@
 import Logo from "../../assets/Logo.jpeg";
-import TahapMasukkanAkun from "./TahapMasukkanAkun";
 import TahapIsiDataDiri from "./TahapIsiDataDiri";
-import TahapSelesai from "./TahapSelesai";
 
 function MainCardRegister() {
   return (
@@ -23,7 +21,7 @@ function MainCardRegister() {
           </p>
         </div>
       </div>
-      <TahapIsiDataDiri/>
+      <TahapIsiDataDiri />
     </div>
   );
 }
