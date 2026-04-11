@@ -1,4 +1,4 @@
-import Logo from "../../assets/logo.jpeg";
+import Logo from "/logo.png";
 import SecondCardLogin from "./SecondCardLogin";
 import HomeIcon from "./HomeIcon"
 
@@ -19,7 +19,7 @@ function MainCardLogin() {
           </p>
           <p className="font-bold">
             <a href="#"
-            className="flex gap-2 items-center">Kembali ke Beranda <HomeIcon /></a>
+              className="flex gap-2 items-center">Kembali ke Beranda <HomeIcon /></a>
           </p>
         </div>
       </div>

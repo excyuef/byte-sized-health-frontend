@@ -1,4 +1,4 @@
-import MainCardLogin from "./MainCardLogin";
+import MainCardLogin from "@/views/components/MainCardLogin";
 
 function Login() {
   return (
