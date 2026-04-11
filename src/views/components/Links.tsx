@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import clsx from 'clsx'
 
 type Links = {
   title: string
@@ -17,11 +18,6 @@ function Links() {
       title: 'Artikel & Tips',
       url: 'articles',
       page: "articles and tips"
-    },
-    {
-      title: "Ruang Bersama",
-      url: "ruang bersama",
-      page: "ruang bersama"
     }
   ]
 
@@ -30,13 +26,20 @@ function Links() {
       className="flex flex-col lg:flex-row items-center justify-center gap-6">
       {link.map((li, i) => {
         return (
-          <NavLink
-            key={i}
-            to={li.url}
-            className="text-(--primary-color-2) transition hover:text-gray-500/75" end>
-            {li.title}
-          </NavLink>
-        )
+          <div
+            data-aos="zoom-in">
+            <NavLink
+              key={i}
+              to={li.url}
+              className={({ isActive }) =>
+                clsx("transition-all",
+                  isActive ? "bg-(--primary-color-2) text-(--primary-white) py-2 px-3 rounded-2xl" : "bg-transparent"
+                )
+              } end>
+              {li.title}
+            </NavLink>
+
+          </div>)
       })}
     </ul>
   )
