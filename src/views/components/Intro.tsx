@@ -1,5 +1,6 @@
 import Button from './Button.tsx'
 import hero from '@/assets/background/hero.jpeg'
+import Burnout from '@/assets/elemen/burnout.jpg'
 
 function Intro() {
   return (
@@ -47,7 +48,7 @@ function Intro() {
         <img
           className="object-cover object-left h-64 md:h-128 w-full 
           rounded-4xl shadow-2xl"
-          src={hero}
+          src={Burnout}
           alt="stress people" />
       </div>
     </div>
