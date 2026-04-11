@@ -3,18 +3,27 @@ import { NavLink } from "react-router";
 type Links = {
   title: string
   url: string
+  page: string
 }
 
-function Links() {
+function Links({ page }) {
   const link: Links[] = [
     {
       title: 'Beranda',
-      url: '/'
+      url: '/',
+      page: "beranda"
     },
     {
       title: 'Artikel & Tips',
-      url: 'articles'
-    }]
+      url: 'articles',
+      page: "articles and tips"
+    },
+    {
+      title: "Ruang Bersama",
+      url: "ruang bersama",
+      page: "ruang bersama"
+    }
+  ]
 
   return (
     <ul

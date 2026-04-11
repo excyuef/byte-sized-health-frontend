@@ -104,7 +104,8 @@ function ArticleAndTips() {
             return <Article
               title={article.title}
               source={article.source}
-              url={article.url} />
+              url={article.url}
+              img={article.img} />
 
           })}
         </div>

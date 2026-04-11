@@ -6,7 +6,11 @@ import MobileMenu from './Mobile.tsx'
 import clsx from 'clsx'
 import { NavLink } from 'react-router'
 
-function Nav() {
+type NavProps = {
+  page: string
+}
+
+function Nav({ pages }: NavProps) {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [isLogin, setLogin] = useState<boolean>(false)
 
@@ -41,6 +45,7 @@ function Nav() {
             className="flex items-center gap-2 md:gap-4">
             <NavLink
               className={clsx(isLogin ? "static" : "hidden", 'text-green-500')}
+              page={pages}
               to="dashboard" end>
               Daily Check-in
             </NavLink>

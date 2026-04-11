@@ -16,7 +16,7 @@ function Intro() {
         <h1
           className="text-5xl md:text-6xl font-bold text-(--primary-color-2)"
           data-aos="fade-right" data-aos-offset="300">
-          Bornout
+          Burnout
         </h1>
         <h3
           className="text-[1rem]"
