@@ -7,7 +7,6 @@ type Article = {
 
 import Article1 from "@/assets/artikel/artikel 1.jpg";
 import Article2 from "@/assets/artikel/artikel 2.jpg";
-
 import Article3 from "@/assets/artikel/artikel 3.jpg";
 import Article4 from "@/assets/artikel/artikel 4.jpg";
 import Article5 from "@/assets/artikel/artikel 5.jpg";

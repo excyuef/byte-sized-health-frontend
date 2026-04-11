@@ -6,7 +6,7 @@ type Links = {
   page: string
 }
 
-function Links({ page }) {
+function Links() {
   const link: Links[] = [
     {
       title: 'Beranda',
@@ -38,15 +38,6 @@ function Links({ page }) {
           </NavLink>
         )
       })}
-
-      <li>
-        <NavLink
-          className="rounded-md bg-(--primary-color-2) px-2 py-1.5 font-medium 
-                  text-(--primary-color-1)"
-          to="ruang bersama" end>
-          Ruang Bersama
-        </NavLink>
-      </li>
     </ul>
   )
 }
