@@ -1,134 +1,76 @@
+import Logo from "../../assets/Logo_Byte_Sized_Health-removebg-preview.png";
+
 function Footer() {
   return (
-    <footer className="py-12 px-6 bg-gray-100 dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+    <footer className="w-full bg-[#9ac0fd] text-white py-10 mt-20">
+      <div className="w-full px-6 md:px-12 lg:px-20 2xl:px-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center sm:text-left">
+        <div className="flex flex-col items-center sm:items-start">
+          <div className="flex items-center space-x-3 mb-4">
+            <div className="w-10 h-10 flex items-center justify-center">
+              <img
+                src={Logo}
+                alt="Byte-Sized-Health Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <span className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+              Byte-Sized-Health
+            </span>
+          </div>
+
+          <p className="text-white/80 text-sm leading-relaxed max-w-xs">
+            Membantu menjaga kesehatan mental dan mencegah burnout dengan
+            langkah kecil setiap hari.
+          </p>
+        </div>
+
         <div>
-          <h3 className="text-gray-900 dark:text-white font-semibold mb-4">
-            Product
-          </h3>
-          <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+          <h3 className="font-semibold mb-4 text-base md:text-lg">Menu</h3>
+          <ul className="space-y-2 text-white/80 text-sm md:text-base">
             <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Features
+              <a href="/" className="hover:text-white transition">
+                Beranda
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Pricing
+              <a href="/artikel" className="hover:text-white transition">
+                Artikel & Tips
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Changelog
+              <a href="./ChatBotPage" className="hover:text-white transition">
+                ByteCare
               </a>
             </li>
           </ul>
         </div>
+
         <div>
-          <h3 className="text-gray-900 dark:text-white font-semibold mb-4">
-            Company
-          </h3>
-          <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+          <h3 className="font-semibold mb-4 text-base md:text-lg">Lainnya</h3>
+          <ul className="space-y-2 text-white/80 text-sm md:text-base">
             <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                About
+              <a href="/about" className="hover:text-white transition">
+                Tentang Kami
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Blog
+              <a href="/contact" className="hover:text-white transition">
+                Kontak
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Careers
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-gray-900 dark:text-white font-semibold mb-4">
-            Resources
-          </h3>
-          <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-            <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Documentation
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Help Center
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Guides
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-gray-900 dark:text-white font-semibold mb-4">
-            Legal
-          </h3>
-          <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-            <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Privacy
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Terms
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[#025CEA] hover:text-white dark:text-[#025CEA] dark:hover:text-white transition-colors"
-              >
-                Cookies
+              <a href="/privacy" className="hover:text-white transition">
+                Privacy Policy
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-[#025CEA] dark:border-[#025CEA] text-center text-gray-600 dark:text-gray-400">
-        <p className="text-gray-500">© 2026 Byte-Sized-Health. All rights reserved.</p>
+
+      <div className="w-full border-t border-white/40 mt-10">
+        <div className="w-full px-6 md:px-12 lg:px-20 2xl:px-32 py-6 text-center text-white/70 text-sm">
+          © 2026 Byte-Sized-Health. All rights reserved.
+        </div>
       </div>
     </footer>
   );

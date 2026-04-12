@@ -16,7 +16,7 @@ import ByteCareLabel from "./views/components/ByteCareLabel.tsx";
 
 function App() {
   return (
-    <div className="flex items-center justify-center mt-22">
+    <div className="flex items-center justify-centermt-22">
       <ChatBotPage/>
     </div>
   );
