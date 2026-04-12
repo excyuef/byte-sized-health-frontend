@@ -1,4 +1,3 @@
-import Logo from "../../assets/Logo.jpeg";
 import TahapIsiDataDiri from "./TahapIsiDataDiri";
 
 function MainCardRegister() {
@@ -6,7 +5,6 @@ function MainCardRegister() {
     <div className="bg-white w-220 h-140 rounded-2xl flex items-center justify-center shadow-2xl p-4">
       <div className="flex flex-col items-center justify-between gap-45 px-5 w-1/2">
         <div className="flex flex-col items-center justify-center gap-6">
-          <img src={Logo} alt="Logo" className="w-54 h-auto" />
           <h2 className="font-bold text-4xl">Hello!</h2>
         </div>
         <div className="flex flex-col items-center justify-center">
