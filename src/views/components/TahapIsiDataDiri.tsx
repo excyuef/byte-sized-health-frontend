@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TahapIsiDataDiriIcon from "./TahapIsiDataDiriIcon";
-import ButtonSignUp from "./ButtonSignUp";
+import ButtonLogin from "./ButtonLogin";
 
 function TahapIsiDataDiri() {
   const [nama, setNama] = useState("");
@@ -10,7 +10,7 @@ function TahapIsiDataDiri() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -89,7 +89,7 @@ function TahapIsiDataDiri() {
 
         {error && <p className="text-red-300">{error}</p>}
 
-        <ButtonSignUp
+        <ButtonLogin
           loading={loading}
           disabled={
             loading ||
@@ -99,6 +99,7 @@ function TahapIsiDataDiri() {
             !password ||
             !confirmPassword
           }
+          children="Register"
         />
       </form>
     </div>

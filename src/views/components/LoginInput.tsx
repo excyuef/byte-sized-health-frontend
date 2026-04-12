@@ -1,15 +1,16 @@
 import { useState } from "react";
 import ButtonLogin from "./ButtonLogin";
-import GoogleAccountButton from "./GoogleAccountButton";
-import FacebookAccountButton from "./FacebookAccountButton";
+import AccountButton from "./AccountButton";
 import Input from "./Input";
+import FacebookLogo from '@/assets/facebook-logo.png'
+import GoogleLogo from '@/assets/google-logo.png'
 
-function SecondCardLogin() {
+export default function LoginInput() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
 
     setLoading(true);
@@ -61,6 +62,7 @@ function SecondCardLogin() {
             <ButtonLogin
               loading={loading}
               disabled={loading || !email || !password}
+              children="Login"
             />
           </div>
 
@@ -71,12 +73,14 @@ function SecondCardLogin() {
           </div>
 
           <p className="text-white text-center">Sign-up with</p>
-          <GoogleAccountButton />
-          <FacebookAccountButton />
+          <AccountButton
+            title='Facebook'
+            img={FacebookLogo} />
+          <AccountButton
+            title='Google'
+            img={GoogleLogo} />
         </div>
       </form>
     </div>
   );
 }
-
-export default SecondCardLogin;
