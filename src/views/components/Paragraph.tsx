@@ -1,7 +1,7 @@
 function Paragraph() {
   return (
     <div
-      className="px-4"
+      className="py-5 px-6 rounded-2xl bg-(--primary-color-1)"
       data-aos="fade" data-aos-duration="1000">
       <span
         className="text-(--primary-black)">

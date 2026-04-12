@@ -2,15 +2,15 @@ import Logo from "../../assets/Logo_Byte_Sized_Health-removebg-preview.png";
 
 function Footer() {
   return (
-    <footer className="w-full bg-[var(--primary-color-1)] text-white py-10">
+    <footer className="w-full bg-(--primary-color-2) text-white py-10 relative bottom-0 right-0 left-0">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-3 gap-8">
         <div className="lg:col-span-1">
           <div className="flex items-center space-x-3 mb-4">
-            <div className="w-10 h-10 bg-gray-90 rounded-lg flex items-center justify-center">
+            <div className="w-15 h-15 p-2 rounded-4xl flex items-center justify-center bg-white">
               <img
                 src={Logo}
                 alt="Byte-Sized-Health Logo"
-                className="w-full h-full object-contain"
+                className="w-full h-full"
               />
             </div>
             <span className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -32,7 +32,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="/artikel" className="hover:text-white transition-colors">
+              <a href="/articles" className="hover:text-white transition-colors">
                 Artikel & Tips
               </a>
             </li>
@@ -48,17 +48,17 @@ function Footer() {
           <h3 className="font-semibold mb-4">Lainnya</h3>
           <ul className="space-y-2 text-white/80">
             <li>
-              <a href="/about" className="hover:text-white transition-colors">
+              <a href="" className="hover:text-white transition-colors">
                 Tentang Kami
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-white transition-colors">
+              <a href="" className="hover:text-white transition-colors">
                 Kontak
               </a>
             </li>
             <li>
-              <a href="/privacy" className="hover:text-white transition-colors">
+              <a href="" className="hover:text-white transition-colors">
                 Privacy Policy
               </a>
             </li>
