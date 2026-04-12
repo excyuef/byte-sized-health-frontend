@@ -3,7 +3,7 @@ import Logo from './Logo.tsx'
 import Links from './Links.tsx'
 import Auth from './AuthNav.tsx'
 import MobileMenu from './Mobile.tsx'
-import clsx from 'clsx'
+// import clsx from 'clsx'
 import { NavLink } from 'react-router'
 
 
@@ -42,7 +42,7 @@ function Nav() {
           <div
             className="flex items-center gap-2 md:gap-4">
             <NavLink
-              className={clsx(isLogin ? "static" : "hidden", 'text-green-500')}
+              className='text-green-500'
               to="dashboard" end>
               Daily Check-in
             </NavLink>
