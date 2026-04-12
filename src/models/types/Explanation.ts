@@ -1,9 +1,9 @@
 export type ExplainProps = {
   id: number;
   active: boolean;
-  title: string;
-  children: React.ReactNode | string;
-  examples: string[];
+  title?: string | null;
+  children?: React.ReactNode | string | null;
+  examples?: string[] | string | null;
 };
 
 export type ExplainDummy = {

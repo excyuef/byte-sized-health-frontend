@@ -5,12 +5,12 @@ import clsx from 'clsx'
 function Explanation({ id, active, title, children, examples }: ExplainProps) {
   return (
     <div
-      className={clsx(active ? 'opacity-100' : 'opacity-0', 'absolute flex flex-col gap-4 scroll-mt-38')}
+      className={clsx(active ? 'opacity-100' : 'opacity-0', 'absolute flex flex-col gap-4 scroll-mt-28')}
       id={`${id}`}>
       <h2
         className='text-2xl md:text-3xl text-(--primary-black) font-medium'
         data-aos="fade-right"
-        data-aos-offset="400">
+        data-aos-offset="450">
         {title}
       </h2>
       <div
@@ -25,15 +25,17 @@ function Explanation({ id, active, title, children, examples }: ExplainProps) {
         </span>
 
         <div
-          className='grid gap-3 grid-cols-1 md:grid-cols-2'>
+          className={clsx(typeof examples === 'string' ? 'flex' : 'grid gap-3 grid-cols-1 md:grid-cols-2')}>
           {
-            examples.map((example) => {
-              return (
-                <ExplainList>
+            typeof examples === "string" ? (
+              <ExplainList>{examples}</ExplainList>
+            ) : Array.isArray(examples) ? (
+              examples.map((example, i) => (
+                <ExplainList key={i}>
                   {example}
                 </ExplainList>
-              )
-            })
+              ))
+            ) : null
           }
         </div>
       </div>
