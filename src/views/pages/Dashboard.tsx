@@ -5,7 +5,7 @@ import InsightCard from '@/views/components/InsightCard'
 function Dashboard() {
   return (
     <div
-      className="mb-500 mt-32 flex flex-col gap-4">
+      className="mt-32 flex flex-col gap-4">
       <div
         className="grid grid-cols-3 gap-4">
         <Score

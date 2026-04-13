@@ -18,6 +18,16 @@ function Links() {
       title: 'Artikel & Tips',
       url: 'articles',
       page: "articles and tips"
+    },
+    {
+      title: 'Dashboard',
+      url: 'Dashboard',
+      page: "dashboard"
+    },
+    {
+      title: 'Chatbot',
+      url: 'chatbot',
+      page: "chatbot"
     }
   ]
 

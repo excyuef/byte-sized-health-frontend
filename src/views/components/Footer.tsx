@@ -25,20 +25,20 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="font-semibold mb-4 text-base md:text-lg">Menu</h3>
-          <ul className="space-y-2 text-white/80 text-sm md:text-base">
+          <h3 className="font-semibold mb-4">Menu</h3>
+          <ul className="space-y-2 text-white/80">
             <li>
-              <a href="/" className="hover:text-white transition">
+              <a href="/" className="hover:text-white transition-colors">
                 Beranda
               </a>
             </li>
             <li>
-              <a href="/artikel" className="hover:text-white transition">
+              <a href="/articles" className="hover:text-white transition-colors">
                 Artikel & Tips
               </a>
             </li>
             <li>
-              <a href="./ChatBotPage" className="hover:text-white transition">
+              <a href="/ChatBotPage" className="hover:text-white transition">
                 ByteCare
               </a>
             </li>
@@ -46,20 +46,20 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="font-semibold mb-4 text-base md:text-lg">Lainnya</h3>
-          <ul className="space-y-2 text-white/80 text-sm md:text-base">
+          <h3 className="font-semibold mb-4">Lainnya</h3>
+          <ul className="space-y-2 text-white/80">
             <li>
-              <a href="/about" className="hover:text-white transition">
+              <a href="" className="hover:text-white transition-colors">
                 Tentang Kami
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-white transition">
+              <a href="" className="hover:text-white transition-colors">
                 Kontak
               </a>
             </li>
             <li>
-              <a href="/privacy" className="hover:text-white transition">
+              <a href="" className="hover:text-white transition-colors">
                 Privacy Policy
               </a>
             </li>

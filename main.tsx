@@ -8,6 +8,8 @@ import ArticleAndTips from './src/views/pages/ArticleAndTips.tsx'
 import Dashboard from './src/views/pages/Dashboard.tsx'
 import Login from './src/views/pages/Login.tsx'
 import Register from './src/views/pages/Register.tsx'
+import Footer from './src/views/components/Footer.tsx'
+import ChatBotPage from './src/views/components/ChatBotPage.tsx'
 
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
@@ -29,13 +31,16 @@ const router = createBrowserRouter([
     children: [
       { index: true, Component: LandingPage },
       { path: "articles", Component: ArticleAndTips },
-      { path: "dashboard", Component: Dashboard }
+      { path: "dashboard", Component: Dashboard },
+      { path: "footer", Component: Footer }
     ],
   }, {
     element: <AuthLayout />, // TANPA navbar/footer
     children: [
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
+      { path: "/articles", element: <ArticleAndTips /> },
+      { path: "/chatbot", element: <ChatBotPage /> },
     ],
   },
 ]);
