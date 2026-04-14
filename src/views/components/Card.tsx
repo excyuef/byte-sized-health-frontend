@@ -15,7 +15,9 @@ function Card({ id, children, img, active, onClick }: Props) {
       href={`#${id}`}
       onClick={() => onClick(id)}>
       <div
-        className={clsx(active ? "border-(--primary-color-2) border-4" : "border-0", "bg-linear-to-b from-(#6E9EED) to-(--primary-white) from-60% shadow-xl md:h-58 md:w-54 h-46 w-42 rounded-3xl flex flex-col items-center gap-6 justify-center")}
+        className={clsx(
+          active ? "border-(--primary-color-2) border-4" : "border-0",
+          "bg-linear-to-b from-(#6E9EED) to-(--primary-white) from-60% shadow-xl rounded-3xl flex flex-col items-center gap-6 justify-center pb-4")}
         data-aos="zoom-out"
       >
         <img
@@ -24,7 +26,7 @@ function Card({ id, children, img, active, onClick }: Props) {
           className="md:h-38 h-24 object-cover" />
 
         <span
-          className="text-(--primary-black) lg:text-lg">
+          className="text-(--primary-black) lg:text-lg font-medium text-center">
           {children}
         </span>
       </div>

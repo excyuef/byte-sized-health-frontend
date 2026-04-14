@@ -38,7 +38,7 @@ function RegisterInput() {
   };
 
   return (
-    <div className="bg-[#025CEA] w-1/2 h-full rounded-2xl flex flex-col items-center justify-between shadow-2xl p-5 pb-10">
+    <div className="bg-[#025CEA] h-full w-full rounded-2xl flex flex-col items-center justify-between shadow-2xl p-5 pb-10">
       <div className="w-full">
         <RegisterProgress />
       </div>

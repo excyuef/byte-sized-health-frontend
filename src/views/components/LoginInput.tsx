@@ -21,7 +21,7 @@ export default function LoginInput() {
     }, 1000);
   };
   return (
-    <div className="bg-[#025CEA] w-1/2 h-full rounded-2xl flex items-center justify-center shadow-2xl">
+    <div className="bg-[#025CEA] h-full w-full rounded-2xl flex items-center justify-center shadow-2xl">
       <form
         onSubmit={handleSubmit}
         className="items-center justify-start flex flex-col gap-7"
@@ -72,13 +72,20 @@ export default function LoginInput() {
             <hr className="border-white w-1/2" />
           </div>
 
-          <p className="text-white text-center">Sign-up with</p>
-          <AccountButton
-            title='Facebook'
-            img={FacebookLogo} />
-          <AccountButton
-            title='Google'
-            img={GoogleLogo} />
+
+          <div
+            className="flex flex-col gap-4">
+            <p className="text-white text-center">
+              Sign-up with
+            </p>
+
+            <AccountButton
+              title='Facebook'
+              img={FacebookLogo} />
+            <AccountButton
+              title='Google'
+              img={GoogleLogo} />
+          </div>
         </div>
       </form>
     </div>

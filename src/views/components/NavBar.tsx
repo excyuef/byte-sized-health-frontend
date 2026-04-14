@@ -3,9 +3,6 @@ import Logo from './Logo.tsx'
 import Links from './Links.tsx'
 import Auth from './AuthNav.tsx'
 import MobileMenu from './Mobile.tsx'
-// import clsx from 'clsx'
-import { NavLink } from 'react-router'
-
 
 
 function Nav() {
@@ -41,11 +38,6 @@ function Nav() {
           className="flex items-center">
           <div
             className="flex items-center gap-2 md:gap-4">
-            <NavLink
-              className='text-green-500'
-              to="dashboard" end>
-              Daily Check-in
-            </NavLink>
             <Auth
               isLogin={isLogin}
               loginHandler={() => { setLogin(!isLogin) }} />

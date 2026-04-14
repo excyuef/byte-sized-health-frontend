@@ -49,8 +49,8 @@ function Symptom() {
         </p>
       </div>
       <div
-        className='w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5
-        justify-items-center gap-y-6'>
+        className='w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 
+        justify-items-center gap-12 px-6 md:p-0'>
 
         {cards.slice(0, 3).map((card, i) => {
           return <Card
@@ -64,24 +64,19 @@ function Symptom() {
 
         })}
 
-        <div
-          className='md:col-span-3 flex md:flex-row flex-col gap-8 
-          md:gap-3 lg:gap-8 xl:gap-4 xl:col-start-4'>
-
-          {cards.slice(3).map((card, i) => {
-            i = i + 3
-            return (
-              <Card
-                key={i}
-                id={i}
-                img={card.img}
-                active={isActive === i}
-                onClick={() => handleOnCLick(i)}>
-                {card.title}
-              </Card>
-            )
-          })}
-        </div>
+        {cards.slice(3).map((card, i) => {
+          i = i + 3
+          return (
+            <Card
+              key={i}
+              id={i}
+              img={card.img}
+              active={isActive === i}
+              onClick={() => handleOnCLick(i)}>
+              {card.title}
+            </Card>
+          )
+        })}
       </div>
 
       <div

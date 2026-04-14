@@ -3,11 +3,10 @@ import './index.css'
 import Root from './src/Root.tsx'
 import AuthLayout from './src/AuthLayout.tsx'
 
-import LandingPage from './src/views/pages/LandingPage.tsx'
-import ArticleAndTips from './src/views/pages/ArticleAndTips.tsx'
-import Dashboard from './src/views/pages/Dashboard.tsx'
-import Login from './src/views/pages/Login.tsx'
-import Register from './src/views/pages/Register.tsx'
+import LandingPage from './src/views/pages/LandingPage'
+import ArticleAndTips from './src/views/pages/ArticleAndTips'
+import Dashboard from './src/views/pages/Dashboard'
+import Auth from './src/views/pages/Auth'
 
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
@@ -32,10 +31,9 @@ const router = createBrowserRouter([
       { path: "dashboard", Component: Dashboard }
     ],
   }, {
-    element: <AuthLayout />, // TANPA navbar/footer
+    element: <AuthLayout />,
     children: [
-      { path: "/login", element: <Login /> },
-      { path: "/register", element: <Register /> },
+      { path: "/auth", element: <Auth /> },
     ],
   },
 ]);

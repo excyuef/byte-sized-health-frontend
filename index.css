@@ -8,10 +8,10 @@
   --primary-white: #f8fafc;
 }
 
-/* * { */
-/*   border: 1px solid black; */
-/* } */
-/**/
+* {
+  border: 1px solid black;
+}
+
 html {
   @apply scroll-smooth;
 }
