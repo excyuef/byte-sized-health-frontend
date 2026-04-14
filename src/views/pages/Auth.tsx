@@ -16,7 +16,6 @@ function Login() {
   return (
     <div className="relative w-220 h-140 overflow-hidden rounded-2xl shadow-2xl bg-white">
 
-      {/* LEFT (Greeting) */}
       <div
         className={`absolute w-1/2 h-full left-0 top-0 flex items-center justify-center transition-all duration-500 ${isLogin
           ? "translate-x-0 opacity-100"
@@ -26,7 +25,6 @@ function Login() {
         <LoginGreeting type="login" handler={pageToggle} />
       </div>
 
-      {/* RIGHT (Form Login) */}
       <div
         className={`p-4 absolute w-1/2 h-full right-0 top-0 flex items-center justify-center transition-all duration-500 ${isLogin
           ? "translate-x-0 opacity-100"
@@ -36,7 +34,6 @@ function Login() {
         <LoginInput />
       </div>
 
-      {/* REGISTER LEFT */}
       <div
         className={`p-4 absolute w-1/2 h-full left-0 top-0 flex items-center justify-center transition-all duration-500 ${!isLogin
           ? "translate-x-0 opacity-100"
@@ -46,7 +43,6 @@ function Login() {
         <RegisterInput />
       </div>
 
-      {/* REGISTER RIGHT */}
       <div
         className={`absolute w-1/2 h-full right-0 top-0 flex items-center justify-center transition-all duration-500 ${!isLogin
           ? "translate-x-0 opacity-100"

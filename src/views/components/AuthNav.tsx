@@ -9,7 +9,7 @@ function Auth({ isLogin, loginHandler }: any) {
       <NavLink
         className="text-(--primary-color-2) ransition hover:text-gray-500/75"
         onClick={loginHandler}
-        to="login"
+        to="auth?type=login"
         end>
         Login
       </NavLink>
@@ -21,7 +21,7 @@ function Auth({ isLogin, loginHandler }: any) {
         className="rounded-md bg-(--primary-color-2) px-2 py-1.5 font-medium 
         text-(--primary-color-1)"
         onClick={loginHandler}
-        to="register"
+        to="auth?type=register"
         end>
         Sign Up
       </NavLink>
