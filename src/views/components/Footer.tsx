@@ -2,9 +2,15 @@ import Logo from "../../assets/Logo_Byte_Sized_Health-removebg-preview.png";
 
 function Footer() {
   return (
+<<<<<<< HEAD
     <footer className="w-full bg-[#9ac0fd] text-white py-10 mt-20">
       <div className="w-full px-6 md:px-12 lg:px-20 2xl:px-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center sm:text-left">
         <div className="flex flex-col items-center sm:items-start">
+=======
+    <footer className="w-full bg-(--primary-color-2) text-white py-10">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-3 gap-8">
+        <div className="lg:col-span-1">
+>>>>>>> 7f735724eeda4ca43fffc3ab8bfe23b6c323c494
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 flex items-center justify-center">
               <img

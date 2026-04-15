@@ -9,7 +9,7 @@ export default function RegisterProgress() {
         size: "3.5em"
       }}>
       <div
-        className="flex justify-between items-center">
+        className="flex justify-between items-center px-4">
         <HiMiniUserCircle />
         <TfiLayoutLineSolid />
         <HiMiniUserCircle />

@@ -15,7 +15,7 @@ function Input({ label, type, placeholder, value, onChange }: InputProps) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="bg-gray-300 border border-white rounded-xl px-1"
+        className="bg-white border border-white rounded-xl py-1 px-2 w-full"
       />
     </>
   );

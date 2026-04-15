@@ -1,10 +1,11 @@
 import { useState } from "react";
 import ButtonLogin from "./ButtonLogin";
 import RegisterProgress from "./RegisterProgress";
+import Input from '@/views/components/Input'
 
 function RegisterInput() {
   const [nama, setNama] = useState("");
-  // const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   // const [telepon, setTelepon] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -38,7 +39,7 @@ function RegisterInput() {
   };
 
   return (
-    <div className="bg-[#025CEA] w-1/2 h-full rounded-2xl flex flex-col items-center justify-between shadow-2xl p-5 pb-10">
+    <div className="bg-[#025CEA] h-full w-full rounded-2xl flex flex-col items-center justify-between shadow-2xl py-5">
       <div className="w-full">
         <RegisterProgress />
       </div>
@@ -48,33 +49,44 @@ function RegisterInput() {
         onSubmit={handleSubmit}
         className="flex flex-col gap-5 items-center"
       >
-        <div>
-          <label className="text-white">Nama Lengkap</label>
-          <input
+        <div
+          className="flex flex-col w-full">
+          <Input
+            label="Nama"
             type="text"
+            placeholder="Masukkan Nama Anda"
             value={nama}
             onChange={(e) => setNama(e.target.value)}
-            className="bg-gray-300 rounded px-2"
           />
         </div>
 
-        <div>
-          <label className="text-white">Password</label>
-          <input
+        <div className="flex flex-col w-full">
+          <Input
+            label="Email"
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div className="flex flex-col w-full">
+          <Input
+            label="Password"
             type="password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="bg-gray-300 rounded px-2"
           />
         </div>
 
-        <div>
-          <label className="text-white">Konfirmasi Password</label>
-          <input
+        <div className="flex flex-col w-full">
+          <Input
+            label="Konfirmasi Password"
             type="password"
+            placeholder=""
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="bg-gray-300 rounded px-2"
           />
         </div>
         {error && <p className="text-red-300">{error}</p>}

@@ -3,13 +3,10 @@ import './index.css'
 import Root from './src/Root.tsx'
 import AuthLayout from './src/AuthLayout.tsx'
 
-import LandingPage from './src/views/pages/LandingPage.tsx'
-import ArticleAndTips from './src/views/pages/ArticleAndTips.tsx'
-import Dashboard from './src/views/pages/Dashboard.tsx'
-import Login from './src/views/pages/Login.tsx'
-import Register from './src/views/pages/Register.tsx'
-import Footer from './src/views/components/Footer.tsx'
-import ChatBotPage from './src/views/components/ChatBotPage.tsx'
+import LandingPage from './src/views/pages/LandingPage'
+import ArticleAndTips from './src/views/pages/ArticleAndTips'
+import Dashboard from './src/views/pages/Dashboard'
+import Auth from './src/views/pages/Auth'
 
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
@@ -35,12 +32,16 @@ const router = createBrowserRouter([
       { path: "footer", Component: Footer }
     ],
   }, {
-    element: <AuthLayout />, // TANPA navbar/footer
+    element: <AuthLayout />,
     children: [
+<<<<<<< HEAD
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
       { path: "/articles", element: <ArticleAndTips /> },
       { path: "/chatbot", element: <ChatBotPage /> },
+=======
+      { path: "/auth", element: <Auth /> },
+>>>>>>> 7f735724eeda4ca43fffc3ab8bfe23b6c323c494
     ],
   },
 ]);
