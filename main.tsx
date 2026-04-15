@@ -29,19 +29,11 @@ const router = createBrowserRouter([
       { index: true, Component: LandingPage },
       { path: "articles", Component: ArticleAndTips },
       { path: "dashboard", Component: Dashboard },
-      { path: "footer", Component: Footer }
     ],
   }, {
     element: <AuthLayout />,
     children: [
-<<<<<<< HEAD
-      { path: "/login", element: <Login /> },
-      { path: "/register", element: <Register /> },
-      { path: "/articles", element: <ArticleAndTips /> },
-      { path: "/chatbot", element: <ChatBotPage /> },
-=======
       { path: "/auth", element: <Auth /> },
->>>>>>> 7f735724eeda4ca43fffc3ab8bfe23b6c323c494
     ],
   },
 ]);
