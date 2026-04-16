@@ -3,7 +3,7 @@ import { MdOutlinePermMedia } from "react-icons/md";
 import { FiCamera } from "react-icons/fi";
 import { FiHeadphones } from "react-icons/fi";
 
-function OverlayMenu({ open, onClose, onSelect }) {
+function OverlayMenu({ open, onSelect }: any) {
   if (!open) return null;
 
   return (

@@ -3,7 +3,7 @@ import { FiPlus } from "react-icons/fi";
 import { IoSend } from "react-icons/io5";
 import OverlayMenu from "./OverlayMenu";
 
-function InputBarChatBot({ onSend }) {
+function InputBarChatBot({ onSend }: any) {
   const [message, setMessage] = useState("");
 
   const handleSend = () => {
@@ -56,9 +56,8 @@ function InputBarChatBot({ onSend }) {
           />
 
           <IoSend
-            className={`text-2xl ml-3 cursor-pointer ${
-              message.trim() ? "text-blue-500" : "text-gray-400"
-            }`}
+            className={`text-2xl ml-3 cursor-pointer ${message.trim() ? "text-blue-500" : "text-gray-400"
+              }`}
             onClick={handleSend}
           />
         </div>

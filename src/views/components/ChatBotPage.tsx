@@ -8,7 +8,7 @@ function ChatBotPage() {
     { text: "Halo! Bagaimana kabar kamu hari ini?", sender: "bot" },
   ]);
 
-  const handleSend = (text) => {
+  const handleSend = (text): any => {
     if (!text.trim()) return;
 
     setMessages((prev) => [...prev, { text, sender: "user" }]);
