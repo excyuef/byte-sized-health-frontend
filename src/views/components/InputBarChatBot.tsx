@@ -3,7 +3,11 @@ import { FiPlus } from "react-icons/fi";
 import { IoSend } from "react-icons/io5";
 import OverlayMenu from "./OverlayMenu";
 
-function InputBarChatBot({ onSend }: any) {
+type Props = {
+  onSend?: (message: string) => void
+}
+
+function InputBarChatBot({ onSend }: Props) {
   const [message, setMessage] = useState("");
 
   const handleSend = () => {
@@ -21,12 +25,12 @@ function InputBarChatBot({ onSend }: any) {
 
   const [open, setOpen] = useState(false);
 
-  const handleSelect = (type) => {
+  const handleSelect = (type: any) => {
     console.log("Pilih:", type);
     setOpen(false);
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       handleSend();
     }

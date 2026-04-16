@@ -1,10 +1,16 @@
-function BubbleChatBot({ messages }: any) {
+import type { Message } from './ChatBotPage'
+
+type BubbleChatBotProps = {
+  messages: Message[]
+}
+
+function BubbleChatBot({ messages }: BubbleChatBotProps) {
   return (
     <div className="bg-white w-full px-5 py-4 rounded-4xl drop-shadow-lg flex flex-col gap-3 max-h-[60vh] overflow-y-auto">
 
       <h2 className="text-[#025CEA] font-bold">ByteCare</h2>
 
-      {messages.map((msg, index): any => (
+      {messages.map((msg, index) => (
         <div
           key={index}
           className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}

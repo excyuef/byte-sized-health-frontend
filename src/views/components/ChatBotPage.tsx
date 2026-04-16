@@ -3,12 +3,17 @@ import ByteCareLabel from "./ByteCareLabel.tsx";
 import BubbleChatBot from "./BubbleChatBot.tsx";
 import InputBarChatBot from "./InputBarChatBot.tsx";
 
+export type Message = {
+  text: string
+  sender: "bot" | "user"
+}
+
 function ChatBotPage() {
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState<Message[]>([
     { text: "Halo! Bagaimana kabar kamu hari ini?", sender: "bot" },
   ]);
 
-  const handleSend = (text): any => {
+  const handleSend = (text: string) => {
     if (!text.trim()) return;
 
     setMessages((prev) => [...prev, { text, sender: "user" }]);
