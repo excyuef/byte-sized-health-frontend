@@ -21,14 +21,13 @@ export default function LoginInput() {
     }, 1000);
   };
   return (
-    <div className="bg-[#025CEA] h-full w-full rounded-2xl flex items-center justify-center shadow-2xl">
+    <div className="bg-[#025CEA] h-full w-full rounded-2xl flex flex-col items-center justify-center shadow-2xl">
+      <h2 className="text-white font-bold text-4xl">Login</h2>
       <form
         onSubmit={handleSubmit}
         className="items-center justify-start flex flex-col gap-7"
       >
-        <h2 className="text-white font-bold text-4xl">Login</h2>
-
-        <div className="flex flex-col gap-0.5">
+        <div className="flex flex-col gap-2">
           <Input
             label="Email"
             type="email"
@@ -44,50 +43,53 @@ export default function LoginInput() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-
-          <div className="flex justify-between items-center mt-3">
-            <div className="flex items-center gap-2">
-              <input type="checkbox" id="remember" />
-              <label htmlFor="remember" className="text-white">
-                Remember me
-              </label>
-            </div>
-
-            <a href="#" className="text-white">
-              Forgot Password?
-            </a>
-          </div>
-
-          <div className="py-5">
-            <ButtonLogin
-              loading={loading}
-              disabled={loading || !email || !password}
-              children="Login"
-            />
-          </div>
-
-          <div className="flex items-center gap-2">
-            <hr className="border-white w-1/2" />
-            <p className="text-white text-center">Or</p>
-            <hr className="border-white w-1/2" />
-          </div>
-
-
-          <div
-            className="flex flex-col gap-4">
-            <p className="text-white text-center">
-              Sign-up with
-            </p>
-
-            <AccountButton
-              title='Facebook'
-              img={FacebookLogo} />
-            <AccountButton
-              title='Google'
-              img={GoogleLogo} />
-          </div>
         </div>
       </form>
+      <div>
+        <div className="flex justify-between items-center mt-3">
+          <div className="flex items-center gap-2">
+            <input type="checkbox" id="remember" />
+            <label htmlFor="remember" className="text-white">
+              Remember me
+            </label>
+          </div>
+
+          <a href="#" className="text-white">
+            Forgot Password?
+          </a>
+        </div>
+
+        <div className="py-5">
+          <ButtonLogin
+            loading={loading}
+            disabled={loading || !email || !password}
+            children="Login"
+          />
+        </div>
+
+        <div className="flex items-center gap-2">
+          <hr className="border-white w-1/2" />
+          <p className="text-white text-center">Or</p>
+          <hr className="border-white w-1/2" />
+        </div>
+
+
+        <div
+          className="flex flex-col gap-4">
+          <p className="text-white text-center">
+            Login with
+          </p>
+
+          <AccountButton
+            title='Facebook'
+            img={FacebookLogo} />
+          <AccountButton
+            title='Google'
+            img={GoogleLogo} />
+        </div>
+
+      </div>
+
     </div>
   );
 }

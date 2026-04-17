@@ -1,20 +1,39 @@
 import { IconContext } from "react-icons";
 import { HiMiniUserCircle } from "react-icons/hi2";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
+import { FaChartPie } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
-export default function RegisterProgress() {
+type ProgressProps = {
+  progress: number
+}
+
+export default function RegisterProgress({ progress }: ProgressProps) {
+  const active = "text-[#A1E5C8]"
+  const base = "text-black"
   return (
     <IconContext.Provider
       value={{
-        size: "3.5em"
+        size: "3.2em"
       }}>
       <div
-        className="flex justify-between items-center px-4">
-        <HiMiniUserCircle />
-        <TfiLayoutLineSolid />
-        <HiMiniUserCircle />
-        <TfiLayoutLineSolid />
-        <HiMiniUserCircle />
+        className="flex justify-between items-center border">
+        <HiMiniUserCircle
+          className={progress >= 1 ? active : base}
+          size="3.8em"
+        />
+
+        <TfiLayoutLineSolid className={base} />
+
+        <FaChartPie
+          className={progress >= 2 ? active : base}
+        />
+
+        <TfiLayoutLineSolid className={base} />
+
+        <FaCheckCircle
+          className={progress >= 3 ? active : base}
+        />
       </div>
     </IconContext.Provider>
   )

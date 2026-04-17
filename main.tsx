@@ -8,6 +8,7 @@ import ArticleAndTips from './src/views/pages/ArticleAndTips'
 import Dashboard from './src/views/pages/Dashboard'
 import Auth from './src/views/pages/Auth'
 import Chatbot from './src/views/pages/Chatbot'
+import DailyCheckIn from './src/views/pages/DailyCheckIn'
 
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       { path: "articles", Component: ArticleAndTips },
       { path: "dashboard", Component: Dashboard },
       { path: "chatbot", Component: Chatbot },
+      { path: "checkin", Component: DailyCheckIn },
     ],
   }, {
     element: <AuthLayout />,
