@@ -53,7 +53,7 @@ function RegisterInput() {
   };
 
   return (
-    <div className="bg-[#025CEA] h-full w-full rounded-2xl flex flex-col items-center shadow-2xl py-8">
+    <div className="bg-[#025CEA] h-full w-full rounded-2xl flex flex-col items-center shadow-2xl py-8 gap-8">
       <div className="w-full px-4">
         <RegisterProgress
           progress={progress} />
@@ -77,7 +77,7 @@ function RegisterInput() {
 
       ) : progress === 2 ? (
         <div
-          className="flex flex-col justify-center items-center">
+          className="flex flex-col justify-center items-center gap-4">
           <h2 className="text-white font-bold text-3xl">Isi Data Diri</h2>
           <form
             onSubmit={handleSubmit}
@@ -145,7 +145,7 @@ function RegisterInput() {
 
       ) : (
         <div
-          className="m-auto pb-12">
+          className="m-auto pb-18">
           <span
             className="text-3xl font-semibold text-white">
             Login Selesai!

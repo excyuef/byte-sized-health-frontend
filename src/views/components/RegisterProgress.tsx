@@ -10,14 +10,14 @@ type ProgressProps = {
 
 export default function RegisterProgress({ progress }: ProgressProps) {
   const active = "text-[#A1E5C8]"
-  const base = "text-black"
+  const base = "text-gray-200"
   return (
     <IconContext.Provider
       value={{
         size: "3.2em"
       }}>
       <div
-        className="flex justify-between items-center border">
+        className="flex justify-between items-center">
         <HiMiniUserCircle
           className={progress >= 1 ? active : base}
           size="3.8em"
